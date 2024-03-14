@@ -24,7 +24,11 @@ const TodoSchema = new mongoose.Schema({
 const Todo = mongoose.model("Todo", TodoSchema);
 
 const corsOptions = {
-  origin: "*",
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://65f29fcfd3011688ec000829--lucky-narwhal-7794d7.netlify.app/",
+  ],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
 };
 
